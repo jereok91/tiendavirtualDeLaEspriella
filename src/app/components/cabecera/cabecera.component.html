@@ -1,0 +1,52 @@
+
+<nav class=" va-sombra navbar navbar-expand-lg navbar-dark  bg-primary fixed-top  p-0 m-0">
+    <!-- <a class="navbar-brand" [routerLink]="'.'">De la Esprella </a> -->
+    <img class="p-1 m-o navbar-brand img" src="../../../assets/img/iconLog.png" width="130" />
+    <!-- <span class="navbar-brand">De la Esprella</span> -->
+
+
+    <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      &#9776;
+    </button>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar Producto" aria-label="Search">
+      <button class="btn btn-dark my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse m-0 p-0">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <!-- Step 4: Close the menu when a link is clicked. -->
+          <a class="nav-link" [routerLink]="'/'" (click)="isMenuCollapsed = true">Inico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/'" (click)="isMenuCollapsed = true">Nosotros</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Blog</a>
+        </li> -->
+        <li class="nav-item listdes" ngbDropdown >
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+            Productos
+          </a>
+          <div ngbDropdownMenu aria-labelledby="" class="dropdown-menu">
+            <a ngbDropdownItem [routerLink]="'/'" (click)="isMenuCollapsed = true">Community Manager</a>
+            <a ngbDropdownItem [routerLink]="'/'" (click)="isMenuCollapsed = true">Maketing Digital</a>
+            <a ngbDropdownItem [routerLink]="'/'" (click)="isMenuCollapsed = true">Desarrollo de Sofware</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/'" (click)="isMenuCollapsed = true">Contactenos</a>
+        </li>
+      </ul>
+      <!-- <div class="my-0 py-0 text-light">
+        <button class="btn py-0 " type="button"  >
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>
+          <p class="my-0 py-0">Login</p>
+        </button>
+      </div> -->
+    </div>
+  </nav>

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "portalDistri"
+    }
+  },
+  "defaultProject": "portalDistri",
+  "cli": {
+    "analytics": "ce1c43d0-10c3-4081-8804-ad164fc2114f"
+  }
 }

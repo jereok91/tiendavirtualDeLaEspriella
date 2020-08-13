@@ -2,24 +2,37 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { QuienessomosComponent } from './components/quienessomos/quienessomos.component';
+import { ContactenosComponent } from './components/contactenos/contactenos.component';
 
 const routes: Routes = [
-{
-  path: "",
-  component: HomeComponent,
-  pathMatch: 'full',
-  data:{
-
-    title: "Inicio"
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: 'full',
+    
+  },
+  {
+    path: "home",
+    component: HomeComponent,
+    data: {
+      title: "Inicio"
+    }
+  },
+  {
+    path: "quienes-somos",
+    component: QuienessomosComponent,
+    data: {
+      title: "Quienes somos"
+    }
+  },
+  {
+    path: "contactenos",
+    component: ContactenosComponent,
+    pathMatch: 'full',
+    data: {
+      title: "Contactenos"
+    }
   }
-} ,
-{
-  path: "quienes-somos",
-  component: QuienessomosComponent,
-  data: {
-    title: "Quienes somos"
-  }
-}
 
 ];
 

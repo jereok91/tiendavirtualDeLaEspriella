@@ -1,5 +1,6 @@
 <app-cabecera></app-cabecera>
-<div class="container">
+<div class="mt-5 pt-5">
     <router-outlet></router-outlet>
 </div>
-<app-piedepagina></app-piedepagina>
+<app-whatsapp-log></app-whatsapp-log>
+<app-piedepagina *ngIf="!page404"></app-piedepagina>

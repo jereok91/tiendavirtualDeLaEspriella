@@ -5,7 +5,7 @@ export const generalAnimaciones= [
         state('in', style({
           transform: 'translateX(0%) translateY(0%) ', 
           opacity: 1
-      })),
+      })), 
         //Enter
         transition('void => *', [
           style({

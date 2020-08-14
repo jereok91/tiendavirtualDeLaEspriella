@@ -8,7 +8,7 @@ export const cabecerAnimacion= [
           opacity: 1
       })),
         //Enter
-        transition('void => *', [
+        transition('void => *', [ 
           style({
             transform: 'translateX(-100%) translateY(20%)',
             opacity: 0

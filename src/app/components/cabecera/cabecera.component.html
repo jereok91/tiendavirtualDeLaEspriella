@@ -1,21 +1,22 @@
-<nav class="va-sombra navbar navbar-expand-lg navbar-dark bg-primary fixed-top  p-0 m-0">
+<nav class="va-sombra navbar navbar-expand-lg navbar-dark bg-primary fixed-top  p-0 m-0"   >
   <div class="container">
 
-    <a class="navbar-brand m-0 p-0" routerLink=''> <img class="m-1 img-thumbnail" src="../../../assets/img/icon-ladr-ferr.png" /> </a>
+    <a class="navbar-brand m-0 p-0" [@diagonal]="'in'" routerLink=''> <img class="m-1 img-thumbnail" src="../../../assets/img/icon-ladr-ferr.png" /> </a>
   
     <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
       <h3>
         &#9776;
       </h3>
     </button>
-  
+
+    
   
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse m-0 p-0">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto" [@bajada]="'in'" >
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/home'" (click)="isMenuCollapsed = true" routerLinkActive="active">Inico </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" >
           <a class="nav-link" [routerLink]="'/quienes-somos'" (click)="isMenuCollapsed = true" routerLinkActive="active">
             Quienes somos </a>
         </li>
@@ -38,4 +39,7 @@
     </div>
    
   </div>
+
+  
 </nav>
+

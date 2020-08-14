@@ -15,14 +15,16 @@ const routes: Routes = [
     path: "home",
     component: HomeComponent,
     data: {
-      title: "Inicio"
+      title: "Inicio",
+      animation: 'Home' 
     }
   },
   {
     path: "quienes-somos",
     component: QuienessomosComponent,
     data: {
-      title: "Quienes somos"
+      title: "Quienes somos",
+      animation: 'quienes-somos'
     }
   },
   {
@@ -30,7 +32,8 @@ const routes: Routes = [
     component: ContactenosComponent,
     pathMatch: 'full',
     data: {
-      title: "Contactenos"
+      title: "Contactenos",
+      animation: 'contactenos'
     }
   }
 

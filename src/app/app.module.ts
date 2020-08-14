@@ -12,6 +12,7 @@ import { WhatsappLogComponent } from './components/whatsapp-log/whatsapp-log.com
 import { CaruselComponent } from './components/carusel/carusel.component';
 import { ProducBanerComponent } from './components/produc-baner/produc-baner.component';
 import { CailidadBanerComponent } from './components/cailidad-baner/cailidad-baner.component';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { CailidadBanerComponent } from './components/cailidad-baner/cailidad-ban
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

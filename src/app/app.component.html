@@ -1,6 +1,11 @@
 <app-cabecera></app-cabecera>
-<div class="mt-5 pt-5">
-    <router-outlet></router-outlet>
+<div class="mt-5 pt-5" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-whatsapp-log></app-whatsapp-log>
-<app-piedepagina *ngIf="!page404"></app-piedepagina>
+<div *ngIf="!pidepagina">
+    <app-piedepagina *ngIf="!page404"></app-piedepagina> 
+</div>
+
+
+
